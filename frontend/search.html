@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link href="css/search.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div id="header">
+         <div class="inb">
+            <a href="#" data-lang="common_leftTtile">수강신청시스템</a>
+         </div>
+         <div class="gnb">
+            <ul>
+               <li><a data-lang="common_notice">공지사항</a></li>
+               <li><a data-lang="basket">장바구니</a></li>
+               <li><a data-lang="register">수강신청</a></li>
+               <li><a data-lang="enroll_check">수강신청확인서</a></li>
+               <li><div data-lang="time_table">시간표조회</div></li>
+            </ul>
+         </div>
+      </div>
+
+      <div id="container">
+         <div
+            style="
+               display: flex;
+               align-items: center;
+               height: 50px;
+               background-color: rgb(230, 230, 230);
+            "
+         >
+            <span style="margin-left: 20px" id="year">년도</span>
+            <input style="width: 60px" type="text" id="inputYear" value="2023" />
+            <span style="margin-left: 20px">학기</span>
+            <select name="semesterlsit" id="semester">
+               <option value="1학기">1학기</option>
+               <option value="2학기">2학기</option>
+               <option value="계절학기">계절학기</option>
+            </select>
+            <!-- 학과 전체를 데이터에 넣어서 불러올지??  -->
+            <span style="margin-left: 20px">학과</span>
+            <select style="width: 200px" name="semesterlsit" id="semester">
+               <option value="전체">전체</option>
+               <option value="전체">산업정보시스템전공</option>
+            </select>
+         </div>
+         <div
+            style="
+               display: flex;
+               align-items: center;
+               height: 50px;
+               background-color: rgb(230, 230, 230);
+            "
+         >
+            <span style="margin-left: 20px" id="year">주야</span>
+            <select name="semesterlsit" id="semester">
+               <option value="1학기">주간</option>
+               <option value="2학기">야간</option>
+            </select>
+            <span style="margin-left: 20px">구분</span>
+            <select name="semesterlsit" id="semester">
+               <option value="1학기">-전체-</option>
+               <option value="1학기">영어전용</option>
+               <option value="2학기">교직</option>
+               <option value="계절학기">공학인증</option>
+            </select>
+            <span style="margin-left: 20px">요일</span>
+            <select name="semesterlsit" id="semester">
+               <option value="1학기">-전체-</option>
+               <option value="월요일">월요일</option>
+               <option value="화요일">화요일</option>
+               <option value="수요일">수요일</option>
+               <option value="목요일">목요일</option>
+               <option value="금요일">금요일</option>
+            </select>
+            <span style="margin-left: 20px">과목명</span>
+            <input style="width: 100px" type="text" id="name" />
+            <input
+               style="margin-left: 10px; background-color: rgb(46, 239, 185); width: 50px"
+               type="button"
+               value="조회"
+               id="button"
+            />
+         </div>
+      </div>
+   </body>
+</html>

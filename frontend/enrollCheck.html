@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <style>
+         td {
+            text-align: center;
+         }
+
+         #header {
+            position: relative;
+            width: 100%;
+            height: 47px;
+         }
+         .inb {
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         .inb a {
+            display: block;
+            width: 258px;
+            height: 44px;
+            padding-left: 40px;
+            line-height: 44px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            background: #00387f;
+         }
+         .gnb {
+            width: 100%;
+            height: 42px;
+            padding-left: 298px;
+            border-bottom: 2px solid #ba000c;
+         }
+         .gnb ul {
+            padding: 0;
+         }
+         .gnb ul li {
+            float: left;
+         }
+         .gnb ul li a {
+            display: block;
+            height: 44px;
+            padding: 0 18px;
+            color: #555;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 44px;
+         }
+         .gnb ul li a:hover,
+         .gnb ul li a:focus {
+            color: #fff;
+            background: #ba000c;
+         }
+         .gnb ul li div {
+            display: block;
+            height: 44px;
+            padding: 0 18px;
+            color: #555;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 44px;
+            color: #fff;
+            background: #ba000c;
+         }
+         ol,
+         ul {
+            list-style: none;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="header">
+         <div class="inb">
+            <a href="#" data-lang="common_leftTtile">수강신청시스템</a>
+         </div>
+         <div class="gnb">
+            <ul>
+               <li><a data-lang="common_notice">공지사항</a></li>
+               <li><a data-lang="basket">장바구니</a></li>
+               <li><a data-lang="register">수강신청</a></li>
+               <li><div data-lang="enroll_check">수강신청확인서</div></li>
+               <li><a data-lang="time_table">시간표조회</a></li>
+            </ul>
+         </div>
+      </div>
+
+      <div id="container">
+         <div
+            style="
+               display: flex;
+               align-items: center;
+               margin-top: 20px;
+               height: 50px;
+               background-color: rgb(230, 230, 230);
+            "
+         >
+            <span style="margin-left: 20px">구분</span>
+            <input type="radio" name="radio" checked="checked" id="personalSchedule" />개인별시간표
+            <input type="radio" name="radio" id="cartHistory" />장바구니신청내역
+            <span style="margin-left: 20px" id="year">년도</span>
+            <input style="width: 60px" type="text" id="inputYear" />
+            <span style="margin-left: 20px">학기</span>
+            <select name="semesterlsit" id="semester">
+               <option value="1학기">1학기</option>
+               <option value="2학기">2학기</option>
+               <option value="계절학기">계절학기</option>
+            </select>
+            <input
+               style="margin-left: 10px; background-color: rgb(46, 239, 185); width: 50px"
+               type="button"
+               value="조회"
+               id="button"
+            />
+         </div>
+
+         <!-- 개인별 시간표 화면 -->
+         <div id="first">
+            <!-- 조회하고자 하는 년도, 학기를 보여줌 -->
+            <p id="dates">2023/1학기 개일별 시간표</p>
+            <p>0교시(08:00~08:50),</p>
+            <table style="width: 100%; table-layout: fixed; border-collapse: collapse" border="1">
+               <tr style="background-color: rgb(237, 237, 240)">
+                  <td>구분</td>
+                  <td>월요일</td>
+                  <td>화요일</td>
+                  <td>수요일</td>
+                  <td>목요일</td>
+                  <td>금요일</td>
+                  <td>토요일</td>
+               </tr>
+               <tr>
+                  <td>교시</td>
+                  <td>
+                     <p style="margin: 0">과목명</p>
+                     <p style="margin: 0">과목코드-강좌(학점)</p>
+                     <p style="margin: 0">건물(호수)</p>
+                     <p style="margin: 0">교수</p>
+                  </td>
+                  <td>
+                     <p style="margin: 0">과목명</p>
+                     <p style="margin: 0">과목코드-강좌(학점)</p>
+                     <p style="margin: 0">건물(호수)</p>
+                     <p style="margin: 0">교수</p>
+                  </td>
+                  <td>
+                     <p style="margin: 0">과목명</p>
+                     <p style="margin: 0">과목코드-강좌(학점)</p>
+                     <p style="margin: 0">건물(호수)</p>
+                     <p style="margin: 0">교수</p>
+                  </td>
+                  <td>
+                     <p style="margin: 0">과목명</p>
+                     <p style="margin: 0">과목코드-강좌(학점)</p>
+                     <p style="margin: 0">건물(호수)</p>
+                     <p style="margin: 0">교수</p>
+                  </td>
+                  <td>
+                     <p style="margin: 0">과목명</p>
+                     <p style="margin: 0">과목코드-강좌(학점)</p>
+                     <p style="margin: 0">건물(호수)</p>
+                     <p style="margin: 0">교수</p>
+                  </td>
+                  <td>
+                     <p style="margin: 0">과목명</p>
+                     <p style="margin: 0">과목코드-강좌(학점)</p>
+                     <p style="margin: 0">건물(호수)</p>
+                     <p style="margin: 0">교수</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>0교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>1교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>2교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>3교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>3교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>4교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>5교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>6교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>7교시</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </table>
+         </div>
+
+         <!-- 장바구니 신청내역 화면 -->
+         <div id="second" style="display: none">
+            <table
+               style="width: 100%; table-layout: fixed; border-collapse: collapse; margin-top: 20px"
+               border="1"
+            >
+               <tr style="background-color: rgb(237, 237, 240)">
+                  <td></td>
+                  <td>우선선택과목</td>
+                  <td>과목코드</td>
+                  <td>과목명</td>
+                  <td>강좌번호</td>
+                  <td>학점</td>
+                  <td>이수구분</td>
+                  <td>교수명</td>
+                  <td>재수강</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>강의실</td>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>3</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>5</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>6</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>7</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>8</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <script>
+         const firstDiv = document.getElementById("first"); // 개인별 시간표 화면 id
+         const secondDiv = document.getElementById("second"); // 장바구니 신청내역 화면 id
+         const personalScheduleRadio = document.getElementById("personalSchedule"); // 개인별 시간표 버튼 id
+         const cartHistoryRadio = document.getElementById("cartHistory"); // 장바구니 신청내역 버튼 id
+
+         const year = document.getElementById("year"); // 입력한 년도
+         const semester = document.getElementById("semester"); // 선택한 학기
+         const dates = document.getElementById("dates"); // 년도/학기 표기하는 p tag id
+         const button = document.getElementById("button"); // 조회 버튼
+
+         // 개인별 시간표 버튼 누르면 개인별 시간표 화면 보여줌
+         personalScheduleRadio.addEventListener("change", () => {
+            firstDiv.style.display = "block";
+            secondDiv.style.display = "none";
+         });
+
+         // 장바구니 신청내역 버튼 누르면 장바구니 신청내역 화면 보여줌
+         cartHistoryRadio.addEventListener("change", () => {
+            firstDiv.style.display = "none";
+            secondDiv.style.display = "block";
+         });
+
+         // 조회 버튼을 누르면 조회하고자 하는 년도, 학기를 보여줌
+         button.addEventListener("click", () => {
+            const yearValue = inputYear.value; // 입력한 년도의 텍스트
+            const semesterValue = semester.value; // 선택한 학기의 값
+            dates.textContent = `${yearValue}/${semesterValue} 개인별 시간표`;
+         });
+      </script>
+   </body>
+</html>

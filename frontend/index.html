@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link href="css/main.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div>
+         <!-- header -->
+         <div id="header">
+            <div class="inb">
+               <a href="#" data-lang="common_leftTtile">수강신청시스템</a>
+            </div>
+            <div class="gnb">
+               <ul>
+                  <li><div data-lang="common_notice">공지사항</div></li>
+                  <li><a href="basket/basketSearchByClass.html" data-lang="basket">장바구니</a></li>
+                  <li><a href="register/registerByBasket.html" data-lang="register">수강신청</a></li>
+                  <li><a href="enrollCheck.html" data-lang="enroll_check">수강신청확인서</a></li>
+                  <li><a href="search.html" data-lang="time_table">시간표조회</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- //header -->
+
+         <!-- container -->
+         <div id="container">
+            <div class="content center">
+               <title>서울과학기술대학교 수강신청시스템</title>
+               <div class="login">
+                  <form action="/html/WebMain" method="post" id="frmLogin" name="frmLogin">
+                     <input type="hidden" name="fsp_action" value="LoginAction" />
+                     <input type="hidden" name="fsp_cmd" value="webLogin" />
+                     <input type="hidden" id="sugang_gubun" name="sugang_gubun" value="web" />
+                     <label for="USER_ID" data-lang="login_input_id">학번</label>
+                     <input
+                        type="text"
+                        id="USER_ID"
+                        name="USER_NUMB"
+                        title="Student Number"
+                        placeholder="Student Number"
+                        style="width: 105px"
+                     />
+                     <label for="PWD" data-lang="login_input_password">비밀번호</label>
+                     <input
+                        type="password"
+                        id="PWD"
+                        name="PWD"
+                        title="Password"
+                        placeholder="Password"
+                        style="width: 105px"
+                     />
+                     <a href="#" class="btn_first ml15">
+                        <span class="btn_last" id="btn_Login" data-lang="login_button_login"
+                           >로그인</span
+                        >
+                     </a>
+                     <a href="#" class="btn_first" target="_blank">
+                        <span class="btn_last" id="btn_GuestLogin">회원가입</span>
+                     </a>
+
+                     <a href="#" class="btn_first">
+                        <span class="btn_last" id="btn_FindStntNumb">학번/비밀번호 찾기</span>
+                     </a>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

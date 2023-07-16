@@ -1,0 +1,84 @@
+.topNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.topNavElement {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+  color: #1e1f1f;
+  text-align: center;
+}
+
+/* Change the link color to #111 (black) on hover */
+.topNavElement:hover {
+  color: #898d8d;
+  background-color: #00205b;
+}
+
+.topNavActive {
+  background-color: #a4343a;
+  color: white;
+}
+
+.bottomNav {
+  font-size: smaller;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ededed;
+  width: 100%;
+}
+
+.bottomNavElement {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  float: left;
+  color: #1e1f1f;
+  text-align: center;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #acafaf;
+}
+
+.bottomNavActive {
+  background-color: #00205b;
+  color: white;
+}
+
+.dataTable {
+  border-collapse: collapse;
+  border: 2px solid gray;
+}
+
+.dataTable th {
+  padding: 5px;
+  background-color: #eeeeee;
+  border: 1px solid gray;
+  text-align: center;
+}
+.dataTable td {
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+th,
+td {
+  margin: 1%;
+}
+
+div {
+  padding: 3px;
+}
+
+select {
+  padding: auto;
+  margin: 1%;
+}
