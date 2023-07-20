@@ -1,126 +1,216 @@
 body {
-   font-family: "Dotum";
-   font-size: 12px;
-   color: #313131;
-   background: #fff;
+  font-family: "Dotum";
+  font-size: 12px;
+  color: #313131;
+  background: #fff;
 }
 a:link,
 a:visited {
-   text-decoration: none;
+  text-decoration: none;
 }
 ol,
 ul {
-   list-style: none;
+  list-style: none;
 }
 form {
-   display: block;
-   margin-top: 0em;
+  display: block;
+  margin-top: 0em;
 }
 input {
-   padding: 3px 7px;
-   border: 1px solid #ccc;
-   font-size: 12px;
-   vertical-align: middle;
+  padding: 3px 7px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  vertical-align: middle;
 }
 /* head */
 #header {
-   position: relative;
-   width: 100%;
-   height: 47px;
+  position: relative;
+  width: 100%;
+  height: 47px;
 }
 .inb {
-   position: absolute;
-   top: 0;
-   left: 0;
+  display: block;
+  position: absolute;
+  list-style-type: none;
+  top: 0;
+  left: 0;
 }
 .inb a {
-   display: block;
-   width: 258px;
-   height: 44px;
-   padding-left: 40px;
-   line-height: 44px;
-   color: #fff;
-   font-weight: bold;
-   font-size: 14px;
-   background: #00387f;
+  display: block;
+  width: 258px;
+  height: 44px;
+  padding-left: 40px;
+  line-height: 44px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  background: #00387f;
 }
-.gnb {
-   width: 100%;
-   height: 42px;
-   padding-left: 298px;
-   border-bottom: 2px solid #ba000c;
+.topNavBar {
+  list-style-type: none;
+  width: 100%;
+  height: 42px;
+  padding-left: 298px;
+  border-bottom: 2px solid #ba000c;
 }
-.gnb ul {
-   padding: 0;
+.topNavBar ul {
+  padding: 0;
 }
-.gnb ul li {
-   float: left;
+
+.topNavBar a {
+  display: block;
+  height: 42px;
+  padding: 0 2%;
+  color: #555;
+  font-weight: bold;
+  font-size: medium;
+  float: left;
+  text-align: center;
 }
-.gnb ul li a {
-   display: block;
-   height: 44px;
-   padding: 0 18px;
-   color: #555;
-   font-weight: bold;
-   font-size: 13px;
-   line-height: 44px;
+
+/* When menu is hovered and focused*/
+.topNavBar ul li a:hover,
+.topNavBar ul li a:focus {
+  color: #ffffff;
+  background: #ba000c;
 }
-.gnb ul li a:hover,
-.gnb ul li a:focus {
-   color: #ffffff;
-   background: #ba000c;
-}
-.gnb ul li div {
-   display: block;
-   height: 44px;
-   padding: 0 18px;
-   color: #555;
-   font-weight: bold;
-   font-size: 14px;
-   line-height: 44px;
-   color: white;
-   background: #ba000c;
+.topNavBar ul li div {
+  display: block;
+  height: 44px;
+  padding: 0 2%;
+  color: #555;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 44px;
+  color: white;
+  background: #ba000c;
 }
 .center {
-   width: 60%;
-   padding: 10px;
+  width: 60%;
+  padding: 10px;
 }
 /* content */
 .content {
-   padding: 15px 0 0 5px;
+  padding: 15px 0 0 5px;
 }
 .content .login {
-   width: 778px;
-   height: 42px;
-   padding: 8px 20px;
-   margin-bottom: 15px;
-   border: 1px solid #dddddd;
-   background: #e8e8e8;
+  width: 778px;
+  height: 42px;
+  padding: 8px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #dddddd;
+  background: #e8e8e8;
 }
 .content .login label {
-   margin: 0 8px 0 20px;
-   color: #4c4c4c;
-   font-weight: bold;
-   font-family: "Malgun Gothic";
+  margin: 0 8px 0 20px;
+  color: #4c4c4c;
+  font-weight: bold;
+  font-family: "Malgun Gothic";
 }
 .content .login label:first-child {
-   margin-left: 0;
+  margin-left: 0;
 }
 .content label {
-   font-weight: bold;
+  font-weight: bold;
 }
 .content .login .btn_first {
-   display: inline-block;
-   padding-left: 10px;
-   height: 21px;
-   color: #fff;
-   font-weight: bold;
-   line-height: 21px;
-   background-color: #00387f;
+  display: inline-block;
+  padding-left: 10px;
+  height: 21px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 21px;
+  background-color: #00387f;
 }
 .content .login .btn_first .btn_last {
-   padding: 5px 10px 5px 0;
+  padding: 5px 10px 5px 0;
 }
 *:first-child + html .login .btn_first .btn_last {
-   padding: 6px 10px 5px 0;
+  padding: 6px 10px 5px 0;
+}
+.studentStatus {
+  border-collapse: collapse;
+  border: 1px solid #bababa;
+  border-spacing: 0;
+  color: #313131;
+}
+/* table-layout:fixed;*/
+.studentStatus th {
+  border-collapse: collapse;
+  border: 1px solid #bababa;
+  font-weight: normal;
+  background-color: #f7f7f7;
+}
+.studentStatus td {
+  border-collapse: collapse;
+  border: 1px solid #bababa;
+  font-weight: bold;
+}
+
+.courseRegiStatus td {
+  border: 1px solid #bababa;
+  border-collapse: collapse;
+  border: 1px solid #bababa;
+  font-weight: bold;
+}
+
+.courseRegiStatus {
+  margin-top: 5px;
+  border-bottom: 1px solid #bababa;
+  border-collapse: collapse;
+}
+
+.courseRegiStatus th {
+  border-top: 1px solid #004276;
+  border-left: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+  border-collapse: collapse;
+  background-color: #eeeeee;
+  color: #004276;
+}
+
+.courseRegiStatus td {
+  border: 1px solid #bababa;
+  border-collapse: collapse;
+}
+
+.subjectNavBar {
+  font-size: smaller;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.subjectNavBar a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  float: left;
+  color: #1e1f1f;
+  text-align: center;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #acafaf;
+}
+
+.bottomNav {
+  font-size: smaller;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ededed;
+  width: 100%;
+}
+
+.bottomNav button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  height: 34px;
+}
+
+.bottomNav button:focus {
+  background-color: #004276;
+  color: #ffffff;
 }

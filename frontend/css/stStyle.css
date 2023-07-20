@@ -1,29 +1,41 @@
-.topNav {
+.topNavBar {
   list-style-type: none;
-  margin: 0;
+  width: 100%;
+  height: 42px;
+  padding-left: 298px;
+  border-bottom: 2px solid #ba000c;
+}
+.topNavBar ul {
   padding: 0;
-  overflow: hidden;
-  background-color: white;
 }
 
-.topNavElement {
+.topNavBar a {
   display: block;
-  padding: 14px 16px;
-  text-decoration: none;
+  height: 44px;
+  padding: 0 2%;
+  color: #555;
+  font-weight: bold;
+  font-size: medium;
   float: left;
-  color: #1e1f1f;
   text-align: center;
 }
 
-/* Change the link color to #111 (black) on hover */
-.topNavElement:hover {
-  color: #898d8d;
-  background-color: #00205b;
+/* When menu is hovered and focused*/
+.topNavBar ul li a:hover,
+.topNavBar ul li a:focus {
+  color: #ffffff;
+  background: #ba000c;
 }
-
-.topNavActive {
-  background-color: #a4343a;
+.topNavBar ul li div {
+  display: block;
+  height: 44px;
+  padding: 0 2%;
+  color: #555;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 44px;
   color: white;
+  background: #ba000c;
 }
 
 .bottomNav {
