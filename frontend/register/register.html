@@ -97,7 +97,7 @@
     </ul>
     <nav class="bottomNav">
       <button class="tab-button" data-tab-section="tab-section-1">
-        소속분반과목조회
+        장바구니조회
       </button>
       <button class="tab-button" data-tab-section="tab-section-2">
         요일별조회
@@ -110,53 +110,46 @@
       </button>
     </nav>
     <br />
-    <!-- 소속분반과목조회 -->
+    <!-- 장바구니조회 -->
     <section id="tab-section-1" class="tab-section">
       <div>
-        <ul>
-          분반
-          <select name="4101">
-            <option value="4101">4101</option>
-            <option value="4102">4102</option>
-          </select>
-
-          <table class="courseRegiStatus">
-            <tr>
-              <th>선택</th>
-              <th>과목코드</th>
-              <th>과목명</th>
-              <th>강좌번호</th>
-              <th>교수명</th>
-              <th>이수구분</th>
-              <th>학점</th>
-              <th>강좌시간</th>
-              <th>재수강년도/학기/과목</th>
-              <th>타과과목</th>
-              <th>주야교차</th>
-              <th>특수과목</th>
-              <th>교직</th>
-              <th>이론/실습 필수 이수현황</th>
-              <th>유사대체</th>
-            </tr>
-            <tr>
-              <td><button>저장</button></td>
-              <td>113031</td>
-              <td>현대사회와윤리</td>
-              <td>21001</td>
-              <td>강병호</td>
-              <td>전공선택</td>
-              <td>3</td>
-              <td>월(1-8),수(1-2)</td>
-              <td></td>
-              <td>N</td>
-              <td>N</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-        </ul>
-      </div>
+      <ul>
+      <table class="courseRegiStatus">
+        <tr>
+          <th><input type="checkbox" /></th>
+          <th>과목코드</th>
+          <th>과목명</th>
+          <th>강좌번호</th>
+          <th>교수명</th>
+          <th>이수구분</th>
+          <th>학점</th>
+          <th>강좌시간</th>
+          <th>재수강년도/학기/과목</th>
+          <th>타과과목</th>
+          <th>주야교차</th>
+          <th>특수과목</th>
+          <th>교직</th>
+          <th>이론/실습 필수 이수현황</th>
+          <th>유사대체</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>113031</td>
+          <td>술래잡기</td>
+          <td>21001</td>
+          <td>이재용</td>
+          <td>전공선택</td>
+          <td>3</td>
+          <td>월(1-2),수(1-2)</td>
+          <td>2018/2</td>
+          <td>N</td>
+          <td>N</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </ul>
     </section>
     <!-- 요일별조회 -->
     <section id="tab-section-2" class="tab-section" hidden>
@@ -355,5 +348,5 @@
       </div>
     </section>
   </body>
-  <script src="btmTabSwitch.js"></script>
+  <script src="../btmTabSwitch.js"></script>
 </html>
