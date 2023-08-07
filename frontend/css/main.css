@@ -57,15 +57,18 @@ input {
   padding: 0;
 }
 
-.topNavBar a {
+.topNavBar ul li {
+  float: left;
+}
+
+.topNavBar ul li a {
   display: block;
-  height: 42px;
-  padding: 0 2%;
+  height: 44px;
+  padding: 0 18px;
   color: #555;
   font-weight: bold;
-  font-size: medium;
-  float: left;
-  text-align: center;
+  font-size: 13px;
+  line-height: 44px;
 }
 
 /* When menu is hovered and focused*/
@@ -77,7 +80,7 @@ input {
 .topNavBar ul li div {
   display: block;
   height: 44px;
-  padding: 0 2%;
+  padding: 0 18px;
   color: #555;
   font-weight: bold;
   font-size: 14px;
