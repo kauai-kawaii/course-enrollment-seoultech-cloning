@@ -12,6 +12,9 @@ ol,
 ul {
   list-style: none;
 }
+ul{
+  padding-inline-start: 0;
+}
 form {
   display: block;
   margin-top: 0em;
@@ -155,7 +158,9 @@ input {
   border-collapse: collapse;
   font-weight: bold;
 }
-
+.courseRegiStatus{
+  width:100% ;
+}
 .courseRegiStatus {
   margin-top: 5px;
   border-bottom: 1px solid #bababa;
