@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="view/findUser.css">
+
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="select">
+        <input type="radio" id="email" name="how" checked><label for="email" onclick="changeInput('email')">이메일</label>
+        <input type="radio" id="phone" name="how" onclick="changeInput('phone')"><label for="phone" onclick="changeInput('phone')">휴대전화</label>
+    </div>
+    <div class="container">
+        <div class="inputData">
+            <p id="name">이름(Name) <input type="text"></p>
+            <p id="birth">생년월일(Birth) <input type="text"></p>
+            <p id="inputLabel">이메일(e-mail) <input type="text"></p>
+        </div>
+        <div class="findBtn">
+            <button>찾기</button>
+            <button>닫기</button>
+        </div>
+    </div>
+
+    <script>
+        function changeInput(selectedOption) {
+            var inputLabel = document.getElementById('inputLabel');
+            var inputField = inputLabel.querySelector('input');
+            
+            if (selectedOption === 'email') {
+                inputLabel.innerHTML = "이메일(e-mail) <input type='text'>";
+                inputField.id = "email";
+                inputField.name = "email";
+            } else if (selectedOption === 'phone') {
+                inputLabel.innerHTML = "휴대전화 <input type='text'>";
+                inputField.id = "number";
+                inputField.name = "number";
+            }
+        }
+    </script>
 </body>
 </html>
