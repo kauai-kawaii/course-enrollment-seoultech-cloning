@@ -18,4 +18,15 @@ CREATE TABLE `basket` (
         `subject_year`,
         `subject_semester`
     )
+    ADD CONSTRAINT `fk_basket_pk` FOREIGN KEY (
+            `subject_code`,
+            `subject_number`,
+            `subject_year`,
+            `subject_semester`
+        ) REFERENCES `new_schema`.`subject_information` (
+            `subject_code`,
+            `subject_number`,
+            `subject_year`,
+            `subject_semester`
+        ) ON DELETE RESTRICT ON UPDATE RESTRICT;
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;

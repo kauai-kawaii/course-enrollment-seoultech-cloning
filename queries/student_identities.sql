@@ -6,7 +6,7 @@ CREATE TABLE `student_identities` (
         `student_main_major` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
         `student_earned_credit` int NOT NULL,
         `student_class`
-    set('2101', '3101', '4101') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    set('1101', '2101', '3101', '4101') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
         `student_applied_credit` int NOT NULL DEFAULT '0',
         `student_grade_year` int NOT NULL,
         `student_max_credit` int NOT NULL,
