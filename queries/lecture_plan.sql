@@ -25,4 +25,4 @@ CREATE TABLE `lecture_plan` (
         `subject_year`,
         `subject_semester`
     )
-) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
