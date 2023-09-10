@@ -1,9 +1,9 @@
 CREATE TABLE `individual_lecture` (
-    `subject_code` VARCHAR(10) NOT NULL,
-    `subject_number` VARCHAR(10) NOT NULL,
-    `subject_year` VARCHAR(10) NOT NULL,
-    `subject_semester` VARCHAR(10) NOT NULL,
-    `student_number` VARCHAR(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    `subject_code` VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `subject_number` VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `subject_year` VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `subject_semester` VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+    `student_number` VARCHAR(8) NOT NULL,
     `student_score`
     SET(
             'A+',
