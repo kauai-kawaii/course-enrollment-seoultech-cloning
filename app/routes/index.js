@@ -1,9 +1,13 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
+const ctrl = require("../controllers/page");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get("/", ctrl.output.home);
+router.get("/basket", ctrl.output.basket);
+router.get("/enrollCheck", ctrl.output.enrollCheck);
+router.get("/register", ctrl.output.register);
+router.get("/search", ctrl.output.search);
+router.get("/signUp", ctrl.output.signUp);
 
 module.exports = router;
