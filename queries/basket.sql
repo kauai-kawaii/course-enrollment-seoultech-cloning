@@ -1,10 +1,10 @@
 CREATE TABLE `basket` (
-    `student_number` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `subject_code` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `subject_number` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `subject_year` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `subject_semester` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `priority_selection` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `student_number` varchar(8) NOT NULL,
+    `subject_code` varchar(10) NOT NULL,
+    `subject_number` varchar(10) NOT NULL,
+    `subject_year` varchar(10) NOT NULL,
+    `subject_semester` varchar(10) NOT NULL,
+    `priority_selection` varchar(45) DEFAULT NULL,
     PRIMARY KEY (
         `student_number`,
         `subject_code`,
@@ -23,7 +23,7 @@ CREATE TABLE `basket` (
             `subject_number`,
             `subject_year`,
             `subject_semester`
-        ) REFERENCES `new_schema`.`subject_information` (
+        ) REFERENCES `subject_information` (
             `subject_code`,
             `subject_number`,
             `subject_year`,

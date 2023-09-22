@@ -5,4 +5,4 @@ CREATE TABLE professor_information (
     professor_lab_phone VARCHAR(15),
     professor_email VARCHAR(45),
     professor_page VARCHAR(100)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;

@@ -30,6 +30,3 @@ CREATE TABLE `subject_information` (
         ),
         FOREIGN KEY (`professor_id`) REFERENCES `professor_information`(`professor_id`),
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-ADD CONSTRAINT `fk_professor_id` FOREIGN KEY (`professor_id`) REFERENCES `new_schema`.`professor_information` (`professor_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-    ADD CONSTRAINT `fk_created_college` FOREIGN KEY (`created_college`) REFERENCES `new_schema`.`major_information` (`major_code`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-    ADD CONSTRAINT `fk_governed_college` FOREIGN KEY (`governed_college`) REFERENCES `new_schema`.`major_information` (`major_code`) ON DELETE NO ACTION ON UPDATE NO ACTION;
