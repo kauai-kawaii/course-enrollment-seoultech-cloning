@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div>
+         <!-- header -->
+         <div id="header">
+            <div class="inb">
+               <a href="#" data-lang="common_leftTitle">수강신청시스템</a>
+            </div>
+            <div class="topNavBar">
+               <ul>
+                  <li><div data-lang="common_notice">공지사항</div></li>
+                  <li><a href="basket" data-lang="basket">장바구니</a></li>
+                  <li><a href="register" data-lang="register">수강신청</a></li>
+                  <li><a href="enrollCheck" data-lang="enroll_check">수강신청확인서</a></li>
+                  <li><a href="search" data-lang="time_table">시간표조회</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- //header -->
+
+         <!-- container -->
+         <div id="container">
+            <div class="content center">
+               <title>서울과학기술대학교 수강신청시스템</title>
+               <div class="login">
+                  <form action="/html/WebMain" method="post" id="frmLogin" name="frmLogin">
+                     <input type="hidden" name="fsp_action" value="LoginAction" />
+                     <input type="hidden" name="fsp_cmd" value="webLogin" />
+                     <input type="hidden" id="sugang_gubun" name="sugang_gubun" value="web" />
+                     <label for="USER_ID" data-lang="login_input_id">학번</label>
+                     <input
+                        type="text"
+                        id="USER_ID"
+                        name="USER_NUMB"
+                        title="Student Number"
+                        placeholder="Student Number"
+                        style="width: 105px"
+                     />
+                     <label for="PWD" data-lang="login_input_password">비밀번호</label>
+                     <input
+                        type="password"
+                        id="PWD"
+                        name="PWD"
+                        title="Password"
+                        placeholder="Password"
+                        style="width: 105px"
+                     />
+                     <a href="#" class="btn_first ml15">
+                        <span class="btn_last" id="btn_Login" data-lang="login_button_login"
+                           >로그인</span
+                        >
+                     </a>
+                     <a
+                        href="signUp"
+                        onclick="window.open(this.href, '_blank', 'width=480, height=650 left=200, top=80'); return false;"
+                        class="btn_first"
+                        target="_blank"
+                     >
+                        <span class="btn_last" id="btn_SignUp">회원가입</span>
+                     </a>
+
+                     <a
+                        href="findUser"
+                        onclick="window.open(this.href, '_blank', 'width=550, height=700 left=200, top=80'); return false;"
+                        class="btn_first"
+                        target="_blank"
+                     >
+                        <span class="btn_last" id="btn_FindUser">학번/비밀번호 찾기</span>
+                     </a>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <h3 id="title">2023학년도 2학기 수강신청 안내</h3>
+         <div class="info" id="content">
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <title>서울과학기술대학교 수강신청시스템</title>
+
+            <ul>
+               <li>
+                  <font color="red">
+                     <b>※ 학부 수강신청 전용</b> 시스템으로 <b>대상자만 접속</b>할 수
+                     있습니다!</font
+                  >
+               </li>
+
+               <li>
+                  ※ 수강신청시스템 로그인 시 추가정보로써 보안숫자를 입력토록 하여
+                  <b>매크로 사용자를 제한하는 서비스를 운영</b>합니다. 따라서
+                  <font color="blue"
+                     ><b>로그인 시 화면에 팝업되는 보안숫자를 입력하셔야 로그인 됨</b></font
+                  >을 알려드립니다.
+               </li>
+
+               <!-- 정규학기 -->
+               <li>
+                  <font color="blue"
+                     ><b>[2023-2학기 재학생 수강신청 로그인가능 기간]</b> 2023. 7. 17(월) 10:00 부터
+                     (복수/부전공, 전과처리가 완료된 후)
+                  </font>
+               </li>
+               <li>
+                  ※ 휴학자 중 복학예정자 수강신청 로그인 안내 : 복학신청기간에 복학신청을 한 후
+                  로그인이 가능함.
+               </li>
+               <!-- <li><font color="blue"><b>[2023-1학기 신/편입생 수강신청 로그인가능 기간]</b> 2023. 2. 13(월) 14:00 부터 (입시처리 결과에 따라 변동 가능) </font> </li>  -->
+               <li>
+                  <font color="blue"
+                     ><b>[장바구니 수강신청 기간]</b> 2023. 8. 1.(화) 10:00 ~ 8. 3.(목) 18:00
+                  </font>
+               </li>
+               <li>
+                  ※ 우선수강신청결과 확인: 2023. 8. 10.(목) 19:00~
+                  <font color="blue"> [확인방법] 수강신청확인서 </font>
+               </li>
+               <li>
+                  <font color="blue"
+                     ><b>[본 수강신청 기간]</b> 2023. 8. 16.(수) 10:00 ~ 8. 18.(금) 18:00
+                  </font>
+               </li>
+               <!-- <li><font color="blue"><b>[신/편입생 수강신청 기간]</b> 2023. 2. 14(화) 10:00 ~ 2. 16(목) 18:00  </font> </li>  -->
+               <li>
+                  <font color="blue"
+                     ><b>[수강신청확인 및 정정 기간]</b> 2023. 9. 5.(화) 10:00 ~ 9. 11.(월) 23:00
+                  </font>
+               </li>
+               <li>
+                  ※ 수강취소 신청지연제 안내 :
+                  <font color="blue">
+                     <a
+                        href="http://www.seoultech.ac.kr/storage/www/intro/sugang_delay.pdf"
+                        target="_blank"
+                        >[수강취소 신청지연제 안내 보기]</a
+                     >
+                  </font>
+               </li>
+               <li>
+                  ※ 등록 후 휴학예상자 수강신청 안내 :
+                  <font color="blue">
+                     <a
+                        href="http://www.seoultech.ac.kr/storage/www/intro/sugangforleaveofabsence.pdf"
+                        target="_blank"
+                        >[등록 후 휴학예상자 수강신청 안내 보기]</a
+                     >
+                  </font>
+               </li>
+
+               <!-- 정규학기 END -->
+               <!-- 정규학기 추가(계속 없으면 삭제해도 됨)
+            <li> ※ 2022학년도 2학기 집중 이수제 안내  : <font color="blue">  <a href="http://www.seoultech.ac.kr/storage/www/intro/sugang_concern.pdf" target="_blank">[2022학년도 2학기 집중 이수제  안내 보기]</a> </font></li>
+            <li> ※ 화학 수강생 안내  : <font color="blue">  <a href="http://www.seoultech.ac.kr/storage/www/intro/Chemistry.pdf" target="_blank">[화학 교육과정 안내사항 보기]</a> </font></li>
+            <li> ※ 물리 수강생 안내  : <font color="blue">  <a href="http://www.seoultech.ac.kr/storage/www/intro/Physics.pdf" target="_blank">[물리 수강신청 안내사항 보기]</a> </font></li>
+            <li> ※ 수학 수강생 안내  : <font color="blue">  <a href="http://www.seoultech.ac.kr/storage/www/intro/Mathematics.pdf" target="_blank">[수학 수강신청 안내사항 보기]</a> </font></li>
+         -->
+               <!-- 신/편입
+             <li><font color="blue"><b>[신편입생 수강신청 기간]</b> 2020. 2. 11(화) 09:00 ~ 2. 12(수) 18:00  </font> </li>
+             <li> <font color="blue"> ※신편입생 로그인 : (학번: <b>수험번호</b>, 비밀번호: <b>주민번호 앞 6자리</b>) </font></li>
+             <li><font color="blue"><b>[신편입생 2차 수강신청 기간]</b> 2020. 2. 24(월) 09:00 ~ 2. 25(화) 18:00  </font> </li>
+         -->
+               <!-- 계절학기
+             <li><font color="blue"><b>[여름계절학기 로그인 가능시간]</b> 2023. 5. 16.(화) 18:00 부터</font></li>
+             <li><font color="blue"><b>[수강신청 기간]</b> 2023. 6. 7.(수) 10:00 ~ 6. 8.(목) 18:00 </font></li>
+             <li><font color="blue"><b>[합폐강으로 인한 추가 수강신청 기간]</b> 2023. 6. 13.(화) 10:00 ~ 6. 14.(수) 18:00 (학과 사무실을 통한 수강신청)</font></li>
+             
+         계절학기 END -->
+
+               <li>※ 수강신청 결과확인 방법: <font color="blue"> 수강신청확인서 </font></li>
+               <!-- 정규학기 -->
+               <li>
+                  -<font color="black"
+                     ><b> 수강 및 정정 기간 첫째날 10:00 이전에도 <u>로그인</u></b> 과
+                     <b><u>수강신청 메뉴화면 접속은 가능</u></b
+                     >합니다. 단, <b>저장/삭제는 10:00 부터 가능</b></font
+                  >
+               </li>
+               <!-- 정규학기 END -->
+               <!-- 계절학기 
+            <li>-<font color="black"><b> 수강신청 기간 첫째날 10:00 이전에도 <u>로그인</u></b> 과 <b><u>수강신청 메뉴화면 접속은 가능</u></b>합니다. 단, <b>저장/삭제는 10:00 부터 가능</b></font></li>
+         계절학기 END -->
+               <!-- 계절학기  추가
+            <li>※ 휴학생 계절학기 수강신청 가능(단, 현장실습 등 수강 불가능한 교과목은 학과사무실로 문의 바랍니다) </li>
+            <li>※ 군휴학생의 계절학기 수강 : 2023학년도 1학기 군이러닝을 수강하지 않은 학생만 계절학기 수강 가능 <br> - 전역일자가 2023학년도 하계계절학기 수강신청 마지막날 2023. 6. 8.(목) 이전인 학생은 <u>전역증만 제출</u>. <br></>단, 휴가기간과 전역기간을 포함하여 2023. 6.26.(월) 이전 미복귀 전역학생은 <u>전역증, 휴가증 둘 다 제출</u>.</li>
+            <li><font color="blue">※ 휴학생이 계절학기 수강으로 졸업요건을 충족하는 경우에도 복학 후 정규학기에서 1학점 이상 이수하여야 졸업처리 </font></li>
+         계절학기 추가 END-->
+
+               <li>
+                  <font color="black"
+                     >- 모듈강좌는 시간표상 M으로 표시되며 100% 영어로 제공되는 외국인 유학생
+                     우선수강 강좌입니다.</font
+                  >
+               </li>
+               <li>
+                  <font color="black"
+                     >- 로그인 비밀번호는 대학<b>포털 비밀번호</b>와 <b>동일</b>합니다. (※ 초기
+                     비밀번호는 6자리 생년월일 입니다.)</font
+                  >
+               </li>
+
+               <li class="pb0">
+                  <span>기타 수강신청 유의 사항</span
+                  ><a
+                     href="http://www.seoultech.ac.kr/storage/www/intro/sugang_web_manual.pdf"
+                     target="_blank"
+                     >[수강신청매뉴얼]</a
+                  >
+                  <ul class="sub_info">
+                     <li>
+                        - 수강신청확인서, 개인별 시간표 조회는 구조적인 처리 지연문제로 시스템장애의
+                        주원인이 되고 있어, 수강신청 피크 타임(첫째 날 10:00 ~ 10:15)에는 출력기능을
+                        제공하지 않사오니 이점 양해바랍니다. 출력이 필요한 경우 10:15 이후
+                        이용하세요.
+                     </li>
+                     <li>
+                        - <b>정규학기인 경우(1,2학기) 복학생</b>은 통합정보시스템에서 복학신청을
+                        하셔야 수강신청대상자가 되며, 수강신청이 가능합니다.
+                     </li>
+                     <li>
+                        - 성능개선 위한 테스트로 인하여 간혹 사용기간이 열려 수강이 가능하실 수도
+                        있으나, 수강신청된 자료는 테스트 후 예고 없이 삭제됩니다.
+                     </li>
+                     <li>
+                        - <b>정규학기인 경우(1,2학기) 장바구니 </b>우선선택과목으로 체크하더라도
+                        우선선택과목 체크 인원이 수강정원 보다 많은 과목은 자동으로 우선수강신청
+                        처리되지 않습니다.
+                     </li>
+                     <li>
+                        - <b>정규학기인 경우(1,2학기) </b>장바구니에만 저장하고 우선선택으로
+                        체크하지 않으면 수강정원 미달이어도 자동 수강신청되지 않으니 유의하시기
+                        바랍니다.
+                     </li>
+                     <li>
+                        - <b>정규학기인 경우(1,2학기) </b>공학인증 학생은 장바구니에 저장한
+                        선후수체계 미준수 교과목에 한하여 첨부된 수강능력 평가서를 작성후 강의담당
+                        교수 승인을 얻어 학과사무실로 제출해야 본 수강신청을 할 수 있습니다.
+                        <a
+                           href="http://www.seoultech.ac.kr/storage/www/intro/confirm.hwp"
+                           target="_blank"
+                           >[수강능력평가서]</a
+                        >
+                     </li>
+                     <!-- 		<li>- 신/편입생은 모바일 앱 수강신청 서비스를 이용할 수 없습니다.</li>  -->
+                     <li>
+                        - 모바일 수강신청앱은 안드로이드, iOS [서울과학기술대학교
+                        스마트캠퍼스]입니다.
+                        <a
+                           href="http://www.seoultech.ac.kr/storage/www/intro/sugang_mobile_manual.pdf"
+                           target="_blank"
+                           >[모바일수강신청매뉴얼]</a
+                        >
+                     </li>
+                     <li>
+                        <font color="blue"
+                           >- 수강신청 저장 시 멀티로그인 여부를 체크하여, 멀티로그인 시 수강과목
+                           저장이 안 될 수 있으니 한 대의 기기에서 하나의 로그인으로만
+                           수강신청하시기 바랍니다.</font
+                        >(※ 최종 로그인 세션만 유효!, 수강신청시스템과 모바일 수강신청을 동시에
+                        사용하실 수 없음!!)
+                     </li>
+                     <li>
+                        - 타인에게 피해를 주는 <font color="red"> <b>매크로 사용을 금지</b></font
+                        >합니다.
+                     </li>
+                     <li>
+                        - 수강활동은 <font color="red"><b> 모니터링 </b></font>되고 있으며,
+                        <font color="red">매크로 탐지 시</font> 해당 사용자 세션은
+                        <font color="red"><b>자동 로그아웃 처리</b></font
+                        >됩니다.
+                        <font color="blue"
+                           >실제 매크로를 사용하지 않더라도 지속적으로 저장 버튼을 계속 클릭하면
+                           매크로 사용으로 탐지될 수 있음.</font
+                        >
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <script>
+         var loginButton = document.getElementById("btn_Login");
+         var loginDiv = document.querySelector(".login");
+
+         function checkStudentInfo() {
+            var studentID = document.getElementById("USER_ID").value;
+            var studentPassword = document.getElementById("PWD").value;
+
+            if (studentID === "" && studentPassword !== "") {
+               alert("아이디를 입력해주십시오.");
+            } else if (studentPassword === "" && studentID !== "") {
+               alert("비밀번호를 입력해주십시오.");
+            } else {
+               // 아이디와 비밀번호가 모두 입력되었을 때
+               loginDiv.style.display = "none";
+            }
+         }
+
+         loginButton.addEventListener("click", () => {
+            checkStudentInfo();
+         });
+      </script>
+   </body>
+</html>
