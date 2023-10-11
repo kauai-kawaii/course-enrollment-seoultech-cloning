@@ -25,7 +25,8 @@ const studentIdendities = sequelize.define(
     },
     student_status: {
       // Student Status:  set {재학, 휴학, 재적}
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM,
+      values: ["재학", "휴학", "재적"],
       defaultValue: "재학",
       allowNull: false,
     },
