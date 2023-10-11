@@ -41,7 +41,8 @@ const studentIdendities = sequelize.define(
     },
     student_class: {
       // Student Class -> 분반 1101, 2101, 3101, 4101
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM,
+      values: ["1101", "2101", "3101", "4101"],
       allowNull: false,
     },
     student_applied_credit: {

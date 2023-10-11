@@ -16,6 +16,7 @@ CREATE TABLE `student_identities` (
         `student_sub_major` VARCHAR(10) DEFAULT NULL,
         `student_dual_major` VARCHAR(10) DEFAULT NULL,
         `student_password` VARCHAR(60) NOT NULL,
+        `student_email` VARCHAR(50) NOT NULL,
         PRIMARY KEY (`student_number`),
         KEY `student_majors_idx` (
             `student_main_major`,
