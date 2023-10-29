@@ -16,11 +16,11 @@ class MajorInformation extends Sequelize.Model {
         
       },
       {
-        tableName: 'major_information', // 실제 데이터베이스의 테이블 이름
+        tableName: 'major_information', 
         sequelize,
-        timestamps: false, // timestamps 관련 설정은 필요에 따라 추가
-        underscored: false, // underscored 관련 설정은 필요에 따라 추가
-        modelName: 'major_information', // 모델 이름
+        timestamps: false,
+        underscored: false,
+        modelName: 'MajorInformation', 
         charset: 'utf8mb4',
         collate: 'utf8mb4_unicode_ci',
       }
@@ -28,15 +28,6 @@ class MajorInformation extends Sequelize.Model {
     
   }
 }
-
-// Major
-//   .sync()
-//   .then(() => {
-//     console.log("Student Idendities model synced with database");
-//   })
-//   .catch((err) => {
-//     console.error("Error syncing Student Identities model with database:", err);
-//   });
 
 
 module.exports = MajorInformation;
