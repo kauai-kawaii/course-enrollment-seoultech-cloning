@@ -26,6 +26,7 @@ LecturePlan.belongsTo(SubjectInformation, {
   foreignKey: 'subject_code',
   sourceKey: 'subject_code'
 })
+
 LecturePlan.belongsTo(SubjectInformation, {
   foreignKey: 'subject_number',
   sourceKey: 'subject_number'
@@ -42,6 +43,18 @@ LecturePlan.belongsTo(SubjectInformation, {
 // 학생, 전공 정보 (주전공) 관계 설정
 StudentIdentities.belongsTo(MajorInformation, {
   foreignKey : 'student_main_major',
+  sourceKey : 'major_code',
+})
+
+// 학생, 전공 정보 (복수전공) 관계 설정
+StudentIdentities.belongsTo(MajorInformation, {
+  foreignKey : 'student_dual_major',
+  sourceKey : 'major_code',
+})
+
+// 학생, 전공 정보 (부전공) 관계 설정
+StudentIdentities.belongsTo(MajorInformation, {
+  foreignKey : 'student_sub_major',
   sourceKey : 'major_code',
 })
 
