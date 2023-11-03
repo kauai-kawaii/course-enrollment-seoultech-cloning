@@ -40,11 +40,11 @@ class Basket extends Sequelize.Model {
           },
       },
       {
-        tableName: 'basket', // 실제 데이터베이스의 테이블 이름
+        tableName: 'basket',
         sequelize,
-        timestamps: false, // timestamps 관련 설정은 필요에 따라 추가
-        underscored: false, // underscored 관련 설정은 필요에 따라 추가
-        modelName: 'Basket', // 모델 이름
+        timestamps: false, 
+        underscored: false, 
+        modelName: 'Basket',
         charset: 'utf8mb4',
         collate: 'utf8mb4_unicode_ci',
       }

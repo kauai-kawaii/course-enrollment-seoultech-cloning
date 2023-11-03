@@ -51,5 +51,6 @@ class LectureTime extends Sequelize.Model {
 }
 
 
+
 module.exports = LectureTime;
 

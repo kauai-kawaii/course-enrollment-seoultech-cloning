@@ -9,7 +9,69 @@ var usersRouter = require('./routes/users');
 
 const { sequelize } = require("./model/database");
 
-// const Basket= require("./model/database/basket");
+const  {StudentIdentities,Basket,SubjectInformation}  = require('./model/database/relations'); 
+
+// sequelize.sync({ force: false })
+//   .then(async () => {
+
+//     try {
+//       console.log('데이터베이스 연결됨.');
+//       const basketsWithSubjectInfo = await StudentIdentities.findByPk({
+//         attributes: ['student_number'],
+//         include: [
+//           {
+//             model: Basket,
+//             // as: 'BasketSubjects', // 별칭 지정
+//             attributes: ['subject_code'],
+//             // through: { attributes: [] }, // 중간 테이블의 추가 속성을 포함하지 않도록 설정
+//           },
+//         ],
+//       });
+  
+//       basketsWithSubjectInfo.forEach(basket => {
+//         console.log(basket.toJSON());
+//       });
+
+//       await sequelize.close();
+//       console.log('데이터베이스 연결 종료');
+//     } catch (error) {
+//       console.error('데이터 조회 실패:', error);
+//     }
+//   })
+//   .catch((err) => {
+//     console.error('데이터베이스 연결 실패:', err);
+//   });
+
+// sequelize.sync({ force: false })
+//   .then(async () => {
+//     try {
+//       console.log('데이터베이스 연결됨.');
+//       const professorsWithSubjectName = await Basket.findAll({
+//         attributes: ['subject_code'],
+//         include: [
+//           {
+//             model: SubjectInformation,
+//             attributes: ['subject_name'],
+//             as: 'SubjectInfo'
+//           },
+//         ],
+//       });
+      
+//       professorsWithSubjectName.forEach(basket => {
+//         console.log(basket.toJSON());
+//         // console.log(basket.SubjectInfo.subject_name); // SubjectInformation의 subject_name
+//       });
+
+//       await sequelize.close();
+//       console.log('데이터베이스 연결 종료');
+//     } catch (error) {
+//       console.error('데이터 조회 실패:', error);
+//     }
+//   })
+//   .catch((err) => {
+//     console.error('데이터베이스 연결 실패:', err);
+//   });
+
 
 sequelize.sync()
 .then(async()=>{

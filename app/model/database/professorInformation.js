@@ -17,7 +17,7 @@ class ProfessorInformation extends Sequelize.Model {
         },
         professor_room: {
           type: DataTypes.STRING(25),
-          allowNull: true, // 이 필드는 NULL 값 허용
+          allowNull: true,
           collate: 'utf8mb4_unicode_ci',
         },
         professor_lab_phone: {
@@ -48,5 +48,7 @@ class ProfessorInformation extends Sequelize.Model {
     );
   }
 }
+
+
 
 module.exports = ProfessorInformation;
