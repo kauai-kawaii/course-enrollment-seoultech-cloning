@@ -84,11 +84,11 @@ class StudentIdentities extends Sequelize.Model {
         },
       },
       {
-        tableName: 'student_identities', // 실제 데이터베이스의 테이블 이름
+        tableName: 'student_identities',
         sequelize,
-        timestamps: false, // timestamps 관련 설정은 필요에 따라 추가
-        underscored: false, // underscored 관련 설정은 필요에 따라 추가
-        modelName: 'student_identities', // 모델 이름
+        timestamps: false, 
+        underscored: false, 
+        modelName: 'StudentIdentities',
         charset: 'utf8mb4',
         collate: 'utf8mb4_unicode_ci',
       }
@@ -97,20 +97,3 @@ class StudentIdentities extends Sequelize.Model {
 }
 
 module.exports = StudentIdentities;
-
-
-(async () => {
-  try {
-    // 데이터베이스에서 데이터 조회
-    const students = await StudentIdentities.findAll({
-      attributes: ['student_name']
-    });
-
-    // 데이터 출력
-    students.forEach(student => {
-      console.log(student.toJSON()); // 데이터를 JSON 형태로 출력
-    });
-  } catch (error) {
-    console.error('데이터 조회 실패:', error);
-  }
-})();

@@ -35,11 +35,11 @@ class IndividualLecture extends Sequelize.Model {
           },
       },
       {
-        tableName: 'individual_lecture', // 실제 데이터베이스의 테이블 이름
+        tableName: 'individual_lecture',
         sequelize,
-        timestamps: false, // timestamps 관련 설정은 필요에 따라 추가
-        underscored: false, // underscored 관련 설정은 필요에 따라 추가
-        modelName: 'individual_lecture', // 모델 이름
+        timestamps: false, 
+        underscored: false, 
+        modelName: 'IndivisualLecture',
         charset: 'utf8mb4',
         collate: 'utf8mb4_unicode_ci',
       }

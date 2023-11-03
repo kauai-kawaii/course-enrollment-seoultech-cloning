@@ -13,16 +13,19 @@ class SubjectInformation extends Sequelize.Model {
           subject_number: {
             type: DataTypes.STRING(10),
             allowNull: false,
+            primaryKey: true,
             collate: 'utf8mb4_unicode_ci',
           },
           subject_year: {
             type: DataTypes.STRING(10),
             allowNull: false,
+            primaryKey: true,
             collate: 'utf8mb4_unicode_ci',
           },
           subject_semester: {
             type: DataTypes.STRING(10),
             allowNull: false,
+            primaryKey: true,
             collate: 'utf8mb4_unicode_ci',
           },
           subject_name: {
@@ -108,7 +111,7 @@ class SubjectInformation extends Sequelize.Model {
         sequelize,
         timestamps: false, 
         underscored: false, 
-        modelName: 'subject_information', 
+        modelName: 'SubjectInformation', 
         charset: 'utf8mb4',
         collate: 'utf8mb4_unicode_ci',
       }

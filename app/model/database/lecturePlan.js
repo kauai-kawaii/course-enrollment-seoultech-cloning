@@ -6,29 +6,29 @@ class LecturePlan extends Sequelize.Model {
     return super.init(
       {
         subject_code: {
-            type: DataTypes.STRING(10),
-            allowNull: false,
-            primaryKey: true,
-            collate: 'utf8mb4_unicode_ci',
-          },
-          subject_number: {
-            type: DataTypes.STRING(10),
-            allowNull: false,
-            primaryKey: true,
-            collate: 'utf8mb4_unicode_ci',
-          },
-          subject_year: {
-            type: DataTypes.STRING(10),
-            allowNull: false,
-            primaryKey: true,
-            collate: 'utf8mb4_unicode_ci',
-          },
-          subject_semester: {
-            type: DataTypes.STRING(10),
-            allowNull: false,
-            primaryKey: true,
-            collate: 'utf8mb4_unicode_ci',
-          },
+          type: DataTypes.STRING(10),
+          allowNull: false,
+          primaryKey: true,
+          collate: 'utf8mb4_unicode_ci',
+        },
+        subject_number: {
+          type: DataTypes.STRING(10),
+          allowNull: false,
+          primaryKey: true,
+          collate: 'utf8mb4_unicode_ci',
+        },
+        subject_year: {
+          type: DataTypes.STRING(10),
+          allowNull: false,
+          primaryKey: true,
+          collate: 'utf8mb4_unicode_ci',
+        },
+        subject_semester: {
+          type: DataTypes.STRING(10),
+          allowNull: false,
+          primaryKey: true,
+          collate: 'utf8mb4_unicode_ci',
+        },
           professor_id: {
             type: DataTypes.STRING(10),
             allowNull: false,
