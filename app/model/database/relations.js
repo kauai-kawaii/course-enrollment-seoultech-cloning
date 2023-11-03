@@ -46,7 +46,7 @@ StudentIdentities.belongsTo(MajorInformation, {
 })
 
 // 학생 1명당 장바구니 1개
-StudentIdentities.belongsTo(Basket, {
+StudentIdentities.hasOne(Basket, {
   foreignKey : 'student_number',
   sourceKey : 'student_number',
 })
@@ -72,9 +72,9 @@ StudentIdentities.belongsTo(Basket, {
 //   foreignKey: 'subject_semester',
 //   sourceKey: 'subject_semester',
 // });
+
 Basket.belongsToMany(SubjectInformation, { through: 'BasketSubject', as: 'BasketSubjects' });
 SubjectInformation.belongsToMany(Basket, { through: 'BasketSubject', as: 'BasketSubjects' });
-
 
 
 // 강의정보, 강의시간 1:1

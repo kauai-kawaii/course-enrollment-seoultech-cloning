@@ -11,38 +11,36 @@ const { sequelize } = require("./model/database");
 
 const  {StudentIdentities,Basket,SubjectInformation}  = require('./model/database/relations'); 
 
-sequelize.sync({ force: false })
-  .then(async () => {
-    try {
-      console.log('데이터베이스 연결됨.');
-      const basketsWithSubjectInfo = await Basket.findAll({
-        attributes: ['subject_code'],
-        include: [
-          {
-            model: SubjectInformation,
-            as: 'BasketSubjects', // 별칭 지정
-            attributes: ['subject_name'],
-            // through: { attributes: [] }, // 중간 테이블의 추가 속성을 포함하지 않도록 설정
-          },
-        ],
-      });
-      
-      basketsWithSubjectInfo.forEach(basket => {
-        console.log(basket.toJSON());
-        // basket.SubjectInfo.forEach(subjectInfo => {
-        //   console.log(subjectInfo.BasketSubjects.subject_name); // SubjectInformation의 subject_name
-        // });
-      });
+// sequelize.sync({ force: false })
+//   .then(async () => {
 
-      await sequelize.close();
-      console.log('데이터베이스 연결 종료');
-    } catch (error) {
-      console.error('데이터 조회 실패:', error);
-    }
-  })
-  .catch((err) => {
-    console.error('데이터베이스 연결 실패:', err);
-  });
+//     try {
+//       console.log('데이터베이스 연결됨.');
+//       const basketsWithSubjectInfo = await StudentIdentities.findByPk({
+//         attributes: ['student_number'],
+//         include: [
+//           {
+//             model: Basket,
+//             // as: 'BasketSubjects', // 별칭 지정
+//             attributes: ['subject_code'],
+//             // through: { attributes: [] }, // 중간 테이블의 추가 속성을 포함하지 않도록 설정
+//           },
+//         ],
+//       });
+  
+//       basketsWithSubjectInfo.forEach(basket => {
+//         console.log(basket.toJSON());
+//       });
+
+//       await sequelize.close();
+//       console.log('데이터베이스 연결 종료');
+//     } catch (error) {
+//       console.error('데이터 조회 실패:', error);
+//     }
+//   })
+//   .catch((err) => {
+//     console.error('데이터베이스 연결 실패:', err);
+//   });
 
 // sequelize.sync({ force: false })
 //   .then(async () => {
@@ -75,11 +73,11 @@ sequelize.sync({ force: false })
 //   });
 
 
-// sequelize.sync()
-// .then(async()=>{
-//   console.log('db 연결 성공 ')
-// })
-// .catch(console.error);
+sequelize.sync()
+.then(async()=>{
+  console.log('db 연결 성공 ')
+})
+.catch(console.error);
 
 var app = express();
 
