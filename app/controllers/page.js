@@ -24,6 +24,9 @@ const output = {
     signUp: (req, res) => {
         res.render("signUp");
     },
+    findUser: (req, res) => {
+        res.render("findUser");
+    },
  };
 
  module.exports = {

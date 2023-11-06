@@ -1,0 +1,52 @@
+<!-- 아이디 찾기 정보 입력 view -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 정보 찾기</title>
+    <!-- <script src="/js/findUser.js" defer></script> -->
+    <link rel="stylesheet" href="/stylesheets/findUser.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>아이디 찾기</h2>
+        <!-- <button onclick="togglePhoneForm()">휴대폰 번호로 찾기</button> -->
+        <div id="phoneForm" class="hidden">
+            <form action="" method="post">
+                <label for="studentName">이름</label>
+                <input type="text" id="studentName" name="studentName" placeholder="이름을 입력하세요" >
+                <label for="studentBirthday">생년월일</label>
+                <input type="text" id="studentBirthday" name="studentBirthday" placeholder="ex) 980905" >
+                <label for="studentPhoneNumber">휴대폰 번호</label>
+                <!-- required -->
+                <input type="text" id="studentPhoneNumber" name="studentPhoneNumber" placeholder="휴대폰 번호를 입력하세요" > 
+                <button id ="findIdBtn" type="submit">찾기</button>
+            </form>
+        </div>
+        <h2>비밀번호 찾기</h2>
+        <div>
+            <form action="" method="post">
+                <label for="">아이디(학번)</label>
+                <input type="text" placeholder="아이디를 입력하세요.">
+                <label for="">이름</label>
+                <input type="text" placeholder="이름을 입력하세요.">
+                <button id ="findPasswordBtn" type="submit">비밀번호 찾기</button>
+            </form>
+        </div>
+        <!-- <button onclick="toggleEmailForm()">이메일로 찾기</button>
+        <div id="emailForm" class="hidden">
+            <form action="#" method="post" id="emailForm">
+                <label for="emailName">이름</label>
+                <input type="text" id="emailName" name="emailName" placeholder="이름을 입력하세요" required>
+                <label for="emailDOB">생년월일</label>
+                <input type="text" id="emailDOB" name="emailDOB" placeholder="ex) 980905" required>
+                <label for="emailAddress">이메일 주소</label>
+                <input type="text" id="emailAddress" name="emailAddress" placeholder="이메일 주소를 입력하세요" required>
+                <button class ="findBtn" type="submit">찾기</button>
+            </form>
+        </div> -->
+    </div>
+
+</body>
+</html>

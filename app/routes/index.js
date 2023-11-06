@@ -9,5 +9,6 @@ router.get("/enrollCheck", ctrl.output.enrollCheck);
 router.get("/register", ctrl.output.register);
 router.get("/search", ctrl.output.search);
 router.get("/signUp", ctrl.output.signUp);
+router.get("/findUser", ctrl.output.findUser);
 
 module.exports = router;
