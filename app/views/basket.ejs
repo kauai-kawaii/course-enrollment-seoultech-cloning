@@ -106,7 +106,7 @@
     </nav>
     <br />
     <!-- 소속분반과목조회 -->
-    <section id="tab-section-1" class="tab-section">
+    <section id="tab-section-1" class="tab-section-by-grade">
       <div>
         <ul>
           분반
@@ -202,8 +202,8 @@
                   <option value="C581655">한국문화전공</option>
                   <option value="20031400">-----기술경영융합대학-----</option>
                   <option value="20031402">산업공학과</option>
-                  <option value="20031404">산업정보시스템전공(학부)</option>
-                  <option value="20033003">ITM전공(학부)</option>
+                  <option value="sgc-iise">산업정보시스템전공(학부)</option>
+                  <option value="sgc-itm">ITM전공(학부)</option>
                   <option value="20031401">경영학과</option>
                   <option value="20031403">경영학전공(학부)</option>
                   <option value="20033004">글로벌테크노경영전공(학부)</option>
@@ -243,14 +243,14 @@
               <td>요일</td>
               <td>
                 <select name="days">
-                  <option value="all">-전체-</option>
-                  <option value="monday">월</option>
-                  <option value="tuesday">화</option>
-                  <option value="wednesday">수</option>
-                  <option value="thursday">목</option>
-                  <option value="friday">금</option>
-                  <option value="saturday">토</option>
-                  <option value="sunday">일</option>
+                  <option value="*">-전체-</option>
+                  <option value="1">월</option>
+                  <option value="2">화</option>
+                  <option value="3">수</option>
+                  <option value="4">목</option>
+                  <option value="5">금</option>
+                  <option value="6">토</option>
+                  <option value="7">일</option>
                 </select>
               </td>
               <td>
@@ -317,14 +317,14 @@
               <option value="computer">컴퓨터공학과</option>
             </select>
             <b>학년</b>
-            <select>
+            <select class="subject_grade">
               <option value="1">1학년</option>
               <option value="2">2학년</option>
               <option value="3">3학년</option>
               <option value="4">4학년</option>
             </select>
             <b>학기</b>
-            <select>
+            <select class="subject_semester">
               <option value="1">1학기</option>
               <option value="2">2학기</option>
             </select>
@@ -343,7 +343,7 @@
             <td>
               <select>
                 <option value="industry">산업공학과</option>
-                <option value="iise">산업정보시스템</option>
+                <option value="sgc-iise">산업정보시스템</option>
                 <option value="computer">컴퓨터공학과</option>
               </select>
             </td>
@@ -460,27 +460,6 @@
         <p>No results found.</p>
         <% } %>
       </table>
-      <div>
-        <ul>
-          <!-- <tr>
-              <td><button>저장</button></td>
-              <td>113031</td>
-              <td>딥러닝</td>
-              <td>21001</td>
-              <td>황상흠</td>
-              <td>전공선택</td>
-              <td>3</td>
-              <td>월(1-2),수(1-2)</td>
-              <td>2018/2</td>
-              <td>N</td>
-              <td>N</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          -->
-        </ul>
-      </div>
     </section>
   </body>
   <script src="../public/javascripts/btmTabSwitch.js"></script>
