@@ -27,6 +27,9 @@ const output = {
     findUser: (req, res) => {
         res.render("findUser");
     },
+    findId: (req, res) => {
+        res.render("findUserId");
+    },
  };
 
  module.exports = {
